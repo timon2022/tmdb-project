@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Button.module.css';
+import styles from './button.module.css';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'text' | 'link'
 export type ButtonSize = 'small' | 'medium' | 'large';
