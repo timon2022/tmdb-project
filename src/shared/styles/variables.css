@@ -1,0 +1,26 @@
+/* app/styles/variables.css */
+:root {
+  /* Цвета */
+  --color-primary: #ffffff;
+  --color-primary-hover: #e94560;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #333333;
+  --color-background: #ffffff;
+  --bg-secondary: #f3f4f6;
+
+  --color-text: #1a1a2e;
+
+
+
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+}
+
+/* Темная тема (применяется к элементу .dark-theme) */
+.dark-theme {
+  --color-background: #0b1120;
+  --color-text: #e9ecef;
+  --color-secondary: #444444;
+  --color-on-secondary: #f0f0f0;
+  --bg-secondary: #0f172a;
+}

@@ -1,0 +1,19 @@
+.btnCon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.button {
+  border: 1px rgb(142, 92, 92) solid;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 1;
+}
+
+.activeButton {
+  background: rgb(209, 62, 62);
+}
+

@@ -1,0 +1,6 @@
+.actorsGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 6), minmax(0, 1fr));
+  gap: 24px;
+  margin: 10px 0;
+}

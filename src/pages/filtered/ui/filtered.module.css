@@ -1,0 +1,10 @@
+.layout {
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  padding: 10px 0;
+}
+
+.layout1 {
+  grid-column: 1;
+}

@@ -1,0 +1,13 @@
+/* MovieSortSelect.module.css */
+
+.select {
+  border-radius: 10px;
+  height: 30px;
+  color: #1a1a2e;
+}
+.lable {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: space-between; */
+}

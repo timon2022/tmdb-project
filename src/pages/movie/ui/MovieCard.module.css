@@ -1,0 +1,260 @@
+/* MovieCard.module.css — адаптация под белый фон */
+
+.card {
+  /* min-height: 100vh ; */
+  max-width: 1280px;
+  width: 100%;
+  background: #ffffff;
+  /* border-radius: 2rem; */
+  overflow: hidden; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.05);
+} */
+
+/* Баннерная область — оставим тёмной для контраста, но можно сделать светлой */
+.banner {
+  position: relative;
+  width: 100%;
+  background: #f5f7fc; /* светлый фон вместо тёмного */
+  overflow: hidden;
+  /* border-radius: 2rem 2rem 0 0; */
+}
+
+.bannerImage {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .bannerImage {
+  transform: scale(1.02);
+}
+
+.bannerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
+  pointer-events: none;
+}
+
+/* основной контент — белый фон */
+.content {
+  padding: 2rem 2rem 2.2rem 2rem;
+  background: #ffffff;
+  border-radius: 0 0 2rem 2rem;
+}
+
+/* мета-информация — тёмные цвета */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.rating {
+  background: #fff2e0;
+  padding: 0.3rem 0.85rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #c17b10;
+  border: 0.5px solid #f5b04240;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ratingIcon {
+  font-size: 1rem;
+  color: #f5a623;
+}
+
+.year,
+.duration {
+  color: #6c757d;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.ageRating {
+  background: #eef2f7;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4a5b6e;
+}
+
+/* заголовок — тёмный текст */
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #1e293b 0%, #2d3e5f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #6c7a8e;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #f5a623;
+  padding-left: 1rem;
+}
+
+/* описание фильма — тёмный текст на светлом фоне */
+.description {
+  margin: 1.5rem 0 1.8rem 0;
+}
+
+.descriptionText {
+  color: #2d3e50;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.descriptionSub {
+  color: #5f6c84;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 85%;
+}
+
+/* дополнительная информация */
+.infoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  margin: 1.8rem 0 1.6rem 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.infoItem {
+  flex: 1;
+  min-width: 140px;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #8b9bb0;
+  margin-bottom: 0.3rem;
+}
+
+.infoValue {
+  font-weight: 500;
+  color: #1e2a3a;
+  font-size: 0.9rem;
+}
+
+/* кнопки — светлая тема */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  font-family: inherit;
+}
+
+.btnPrimary {
+  background: #f5a623;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25);
+}
+
+.btnPrimary:hover {
+  background: #ffb841;
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.35);
+  color: #ffffff;
+}
+
+.btnOutline {
+  border: 1px solid #d1d9e8;
+  color: #2d3e50;
+  background: #fdfdfd;
+}
+
+.btnOutline:hover {
+  border-color: #f5a623;
+  background: #fff7ed;
+  color: #c17b10;
+}
+
+/* адаптивность */
+@media (max-width: 780px) {
+  .content {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .descriptionSub {
+    max-width: 100%;
+  }
+  .infoGrid {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .tagline {
+    font-size: 0.85rem;
+  }
+  .descriptionText {
+    font-size: 0.9rem;
+  }
+}
+
+/* анимация (без изменений) */
+.card {
+  animation: fadeSlideUp 0.55s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

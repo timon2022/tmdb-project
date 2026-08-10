@@ -1,0 +1,81 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Размеры */
+.small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.medium {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.large {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+/* Primary — прозрачная с чёрным контуром */
+
+.primary {
+  background-color: transparent;
+  border: 1px solid var(--color-on-secondary);
+  color: var(--color-on-secondary);
+}
+
+.primary:hover:not(:disabled) {
+
+  background-color: color-mix(in srgb, var( --color-on-secondary) 10%, transparent);
+  border-color: var(--color-on-secondary);
+  color: var(--color-on-secondary);
+}
+
+
+
+/* Secondary — оставляем как было (серый фон) */
+.secondary {
+  background-color: #86aefa;
+  color: rgb(255, 255, 255);
+}
+.secondary:hover:not(:disabled) {
+  background-color: #003cff;
+}
+
+/* Outline */
+.outline {
+  background-color: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+}
+.outline:hover:not(:disabled) {
+  background-color: #eff6ff;
+}
+
+/* Text */
+.text {
+  background-color: transparent;
+  color: #3b82f6;
+}
+.text:hover:not(:disabled) {
+  background-color: #f1f5f9;
+}
+
+.disabled {
+  /* opacity: 0.6; */
+  cursor: not-allowed;
+}
+
+.fullWidth {
+  width: 100%;
+}

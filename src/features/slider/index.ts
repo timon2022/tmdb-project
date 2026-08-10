@@ -1,0 +1,1 @@
+export { BasicSlider } from './ui/BasicSlider'

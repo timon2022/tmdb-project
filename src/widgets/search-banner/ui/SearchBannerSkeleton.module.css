@@ -1,0 +1,64 @@
+.skeletonSection {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d0d0d0; /* перекрывает фоновое изображение */
+  display: flex;
+}
+.skeletonContent {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonTitle {
+  width: 300px;
+  height: 48px;
+  background-color: #b0b0b0;
+  border-radius: 8px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonSubtitle {
+  width: 220px;
+  height: 32px;
+  background-color: #b0b0b0;
+  border-radius: 8px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonSearchBarCon {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.skeletonSearchBar {
+  width: 100%;
+  max-width: 400px;
+  height: 48px;
+  background-color: #b0b0b0;
+  border-radius: 24px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonSearchBarBtn {
+  width: 100%;
+  max-width: 50px;
+  height: 48px;
+  background-color: #b0b0b0;
+  border-radius: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}

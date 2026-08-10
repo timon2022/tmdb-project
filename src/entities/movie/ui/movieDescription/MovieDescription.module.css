@@ -1,0 +1,16 @@
+
+
+.descriptionText {
+
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.descriptionSub {
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 85%;
+}

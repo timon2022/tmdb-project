@@ -1,0 +1,104 @@
+/* Header.module.css */
+
+.header {
+  background-color: var(--bg-secondary, #1060ff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgb(241, 239, 239);
+
+}
+
+.header_content {
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: var(--color-gray-100);
+  transition: background-color 0.3s ease;
+}
+
+/* Тема light */
+.light {
+  --header-bg: #ffffff;
+  --text-color: #1a1a2e;
+  --nav-hover: #e94560;
+  --switch-bg: #ccc;
+}
+
+/* Тема dark */
+.dark {
+  --header-bg: #16213e;
+  --text-color: #f0f0f0;
+  --nav-hover: #e94560;
+  --switch-bg: #0f3460;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logoLink {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var( --color-primary-hover);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: var( --color-primary-hover);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.labelText {
+  font-size: 1.2rem;
+}
+
+.navLink.active {
+  color: var( --color-primary-hover);
+}
+
+.navLink.active::after {
+  width: 100%;
+}

@@ -1,0 +1,70 @@
+/* MovieCard.module.css — адаптация под белый фон */
+
+.card {
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.content {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover .bannerImage {
+  transform: scale(1.02);
+}
+
+/* кнопки — светлая тема */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  font-family: inherit;
+}
+
+.btnPrimary {
+  background: #f5a623;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.25);
+}
+
+.btnPrimary:hover {
+  background: #ffb841;
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.35);
+}
+
+.btnOutline {
+  border: 1px solid #d1d9e8;
+
+  background: #fdfdfd;
+}
+
+.btnOutline:hover {
+  /* border-color: #f5a623; */
+  background: #fff7ed;
+}
+
+/* адаптивность */
+
+/* анимация (без изменений) */
+.card {
+  animation: fadeSlideUp 0.55s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}

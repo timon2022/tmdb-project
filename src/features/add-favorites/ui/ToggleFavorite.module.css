@@ -1,0 +1,32 @@
+/* Heart.module.css */
+.container {
+  
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background: transparent;
+  border: none;
+  outline: none;
+
+}
+
+
+
+.svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: filter 0.2s ease;
+}
+
+.container:hover .svg {
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* адаптивность для маленьких экранов */
+@media (max-width: 500px) {
+  .svg {
+    width: 20px;
+    height: 20px;
+  }
+}
