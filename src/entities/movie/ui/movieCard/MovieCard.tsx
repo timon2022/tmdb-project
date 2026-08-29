@@ -15,7 +15,7 @@ type MovieProps = {
 
 
 export const MovieCard = ({
-    imageUrl = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=720&h=1080&fit=crop&crop=center',
+    imageUrl ,
     title = 'Интерстеллар',
     rating = '8.7',
     children,
@@ -62,7 +62,6 @@ export const MovieCard = ({
                 </NavLink >
                 {children && <div className={styles.addFavorite}>{children}</div>}
             </article >
-
 
         </>
     );

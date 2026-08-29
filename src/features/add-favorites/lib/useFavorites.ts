@@ -55,7 +55,6 @@ export const useFavorites = () => {
             const newFavorites = isExist
                 ? prev.filter((m) => movie.id !== m.id)
                 : [...prev, movie];
-            
             // Помечаем как внутреннее обновление
             isInternalUpdate.current = true;
             return newFavorites;

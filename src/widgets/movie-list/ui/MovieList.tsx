@@ -3,7 +3,7 @@ import { useBuildImageUrl } from "shared/hooks/useBuildImageUrl";
 import style from './MovieList.module.css'
 import type { EndPointsName, Movie, } from "entities/movie/model";
 import { ViewMoreButton } from "features/view-more";
-import { ToggleFavorite, useFavorites } from "features/add-favorites";
+import { ToggleFavorite } from "features/add-favorites";
 import { MovieListSkeleton } from "./MovieListSkeleton";
 
 
@@ -19,7 +19,6 @@ type Props = {
 
 export const MovieList = ({ isSkeleton, targetUrl, title, size = 'w342', columns = 6, data = [], limit = data.length }: Props) => {
 
-    const { isFavorite, toggleFavorite } = useFavorites()
     const buildImageUrl = useBuildImageUrl();
 
     if (isSkeleton) {
@@ -42,7 +41,7 @@ export const MovieList = ({ isSkeleton, targetUrl, title, size = 'w342', columns
                         imageUrl={buildImageUrl(movie.poster_path, size, 'poster_sizes')}
                         title={movie.title}
                         rating={movie.vote_average.toString()}
-                        children={<ToggleFavorite isFavorite1={isFavorite(movie.id)} onToggle={() => toggleFavorite(movie)} />}
+                        children={<ToggleFavorite movie={movie} />}
                     />
                 ))}
             </div>

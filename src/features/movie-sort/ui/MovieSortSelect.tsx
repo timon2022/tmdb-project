@@ -1,6 +1,7 @@
 import type { ChangeEvent } from "react";
 import { useSearchParams } from "react-router";
 import styles from './MovieSortSelect.module.css';
+
 const sortOptions = [
     { value: 'original_title.asc', label: 'Title (A → Z)' },
     { value: 'original_title.desc', label: 'Title (Z → A)' },
@@ -29,7 +30,7 @@ export const MovieSortSelect = () => {
 
             <span> Sort by
             </span>
-            <select name="" id="" onChange={handleSelect} className={styles.select}>
+            <select  onChange={handleSelect} className={styles.select}>
                 {sortOptions.map(option =>
                     <option key={option.value} value={option.value} >
                         {option.label}

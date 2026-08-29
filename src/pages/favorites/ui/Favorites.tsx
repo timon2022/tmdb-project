@@ -1,16 +1,14 @@
 
 
-import { useFavorites } from "features/add-favorites"
 
+import { selectMovies } from "features/add-favorites/model/favoriteSlice";
+import { useSelector } from "react-redux";
 import { MovieList } from "widgets/movie-list"
 
 
-
-
-
 const Favorites = () => {
-    const { favorites } = useFavorites()
 
+    const favorites = useSelector(selectMovies);
 
     return (
         <>
